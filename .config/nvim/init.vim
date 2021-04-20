@@ -56,6 +56,7 @@ let g:airline_theme='gruvbox'
 
 "Nerdtree
 let NERDTreeWinSize=45
+let NERDTreeQuitOnOpen=1
 map <C-n> :NERDTreeToggle<CR>
 
 nnoremap <leader>b :CtrlPBuffer<CR>
@@ -63,3 +64,7 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 "nnoremap <leader>bp :bN<CR>
 nnoremap <leader>e :CtrlP<CR>
 nnoremap <leader>/ :noh<CR>
+
+autocmd BufNewFile,BufRead *.tex set filetype=tex
+autocmd Filetype tex setlocal spell
+autocmd Filetype markdown setlocal spell
