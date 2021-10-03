@@ -7,6 +7,7 @@ call plug#begin( stdpath('data') . '/plugged' )
     Plug 'preservim/nerdtree'
     Plug 'junegunn/goyo.vim'
     Plug 'gyim/vim-boxdraw'
+    Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 "set t_Co=256
