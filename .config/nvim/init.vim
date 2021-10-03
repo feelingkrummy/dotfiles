@@ -9,10 +9,10 @@ call plug#begin( stdpath('data') . '/plugged' )
     Plug 'gyim/vim-boxdraw'
 call plug#end()
 
-set t_Co=256
+"set t_Co=256
 
 "highlight colorcolumn ctermbg=0 guibg=lightgrey
-"set termguicolors
+set termguicolors
 
 let mapleader=" "
 
