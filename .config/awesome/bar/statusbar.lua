@@ -107,7 +107,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-	    wibox.widget.textclock(),
+	        wibox.widget.textclock(" %a %b %d, %I:%M %p "),
             s.mylayoutbox,
         },
     }

@@ -11,7 +11,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 #
-PROMPT='%F{red}[%f%F{yellow}%n%f%F{green}@%M%f %F{blue}%~]%f %# ' 
+PROMPT='%F{red}[%f%F{yellow}%n%f%F{green}@%M%f %F{blue}%3~]%f %# ' 
 
 alias ls="ls --color=auto"
 
@@ -19,6 +19,7 @@ alias ll="ls -lh"
 alias la="ls -a"
 alias lla="ll -a"
 
-alias vim="nvim"
+alias v="nvim"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+

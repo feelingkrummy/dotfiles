@@ -45,6 +45,8 @@ set shiftwidth=4
 set smartindent
 
 set linebreak
+set breakindent
+set breakindentopt=shift:4,min:0
 
 
 "CtrlP
@@ -65,6 +67,8 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 "nnoremap <leader>bp :bN<CR>
 nnoremap <leader>e :CtrlP<CR>
 nnoremap <leader>/ :noh<CR>
+nnoremap <leader>q :Bclose<CR>
+nnoremap <leader>Q :Bclose!<CR>
 
 autocmd BufNewFile,BufRead *.tex set filetype=tex
 autocmd Filetype tex setlocal spell
