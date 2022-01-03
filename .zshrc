@@ -2,7 +2,13 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
 bindkey -v
+
+bindkey "^[[H"  beginning-of-line
+bindkey "^[[F"  end-of-line
+bindkey "^[[3~" delete-char
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/kameron/.zshrc'
@@ -23,7 +29,7 @@ alias la="ls -a"
 alias lla="ll -a"
 
 alias v="nvim"
-alias sue="EDITOR=nvim sudoedit"
+alias sue="sudoedit"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
