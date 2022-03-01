@@ -20,7 +20,8 @@ compinit
 # PROMPT="%F{red}[%f%F{yellow}%n%f%F{green}@%M%f %F{blue}%3~]%f %# " 
 #RPROMPT='%(?.%F{green}[%?]%f.%B%F{red}[%?]%f%b)'
 RPROMPT='%(?..%B%F{red}[%?]%f%b)'
-PROMPT=$'\n'"%F{cyan}(%M)%f %F{blue}%~%f"$'\n'" %B%F{yellow}>>%f%b " 
+# PROMPT=$'\n'"%F{cyan}(%M)%f %F{blue}%~%f"$'\n'" %B%F{yellow}>>%f%b " 
+PROMPT="%F{blue}[%n]%f%F{yellow}(%3~)%f %F{red}>%f "
 
 alias ls="ls --color=auto"
 

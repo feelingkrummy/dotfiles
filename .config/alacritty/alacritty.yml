@@ -3,18 +3,18 @@ env:
 
 font:
   normal:
-    family: TerminessTTF Nerd Font Mono
+    family: JetBrains Mono
     style: Medium
   bold:
-    family: TerminessTTF Nerd Font Mono
+    family: JetBrains Mono 
     style: Bold
   italic:
-    family: TerminessTTF Nerd Font Mono
+    family: JetBrains Mono
     style: Italic
   bold_italic:
-    family: TerminessTTF Nerd Font Mono
+    family: JetBrains Mono
     style: Bold Italic
-  size: 13
+  size: 10
 
 draw_bold_text_with_bright_colors: true
 
@@ -33,7 +33,7 @@ colors:
   normal:
     black:    '#1d2021'
     red:      '#cc241d'
-    green:    '#98711a'
+    green:    '#98971a'
     yellow:   '#d79921'
     blue:     '#458588'
     magenta:  '#b16286'
@@ -48,9 +48,6 @@ colors:
     magenta:  '#d3869b'
     cyan:     '#8ec07c'
     white:    '#ebdbb2'
-
-window:
-  opacity: 0.95
 
 cursor:
   style:
