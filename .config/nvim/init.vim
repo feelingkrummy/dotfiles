@@ -1,6 +1,5 @@
 call plug#begin( stdpath('data') . '/plugged' )
     Plug 'arcticicestudio/nord-vim'
-    Plug 'morhetz/gruvbox'
     Plug 'kien/ctrlp.vim'
     Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes'
@@ -8,6 +7,9 @@ call plug#begin( stdpath('data') . '/plugged' )
     Plug 'junegunn/goyo.vim'
     Plug 'gyim/vim-boxdraw'
     Plug 'rbgrouleff/bclose.vim'
+    "Color Schemes:
+    Plug 'morhetz/gruvbox'
+    Plug 'sainnhe/everforest'
 call plug#end()
 
 "set t_Co=256
@@ -23,6 +25,10 @@ set cursorline
 let g:gruvbox_contrast_dark='hard'
 set background=dark
 colorscheme gruvbox
+
+"set background=dark
+"let g:everforest_background='medium'
+"colorscheme everforest
 
 set hidden
 
@@ -57,6 +63,7 @@ let g:ctrlp_working_path_mode = '0'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
+"let g:airline_theme='everforest'
 
 "Nerdtree
 let NERDTreeWinSize=45
