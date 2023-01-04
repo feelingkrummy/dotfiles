@@ -17,6 +17,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 #
+
+setopt completealiases
+
 # PROMPT="%F{red}[%f%F{yellow}%n%f%F{green}@%M%f %F{blue}%3~]%f %# " 
 #RPROMPT='%(?.%F{green}[%?]%f.%B%F{red}[%?]%f%b)'
 RPROMPT='%(?..%B%F{red}[%?]%f%b)'
