@@ -4,6 +4,12 @@ return require('packer').startup( function(use)
 
     -- Packer
     use 'wbthomason/packer.nvim'
+
+    -- Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
     
     -- Plugins
     use 'kien/ctrlp.vim'
