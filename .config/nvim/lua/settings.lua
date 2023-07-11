@@ -19,5 +19,3 @@ vim.opt.smartindent = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.breakindentopt = { shift = 4, min = 0 }
-
-
