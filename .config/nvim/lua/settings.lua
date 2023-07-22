@@ -20,4 +20,4 @@ vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.breakindentopt = { shift = 4, min = 0 }
 
-
+vim.g.zig_fmt_autosave = false

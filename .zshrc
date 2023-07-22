@@ -37,3 +37,4 @@ alias sue="sudoedit"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+export QSYS_ROOTDIR="/home/kameron/intelFPGA_lite/22.1std/quartus/sopc_builder/bin"
