@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+import requests
+import json
+import os
+import tarfile
+
+response = requests.get("https://ziglang.org/download/index.json")
+zig_json = response.json()
+
+zig_exists = os.path.exists("/home/kameron/.local/bin/zig")
+print( zig_exists )
+
+output_file = "/tmp/zig-download.tar.xz"
+download_file = zig_json["master"]["x86_64-linux"]["tarball"]
+print(download_file)
+extracted_dir_name = "zig-linux-x86_64-" + zig_json["master"]["version"]
+print(extracted_dir_name)
+
+if zig_exists :
+    pass
+else:
+    tarball = requests.get( download_file, stream=True)
+    print("Downloaded tar.xz")
+    with open( output_file, 'wb' ) as fd:
+        for chunk in tarball.iter_content(chunk_size=256):
+            fd.write(chunk)
+    tmp_tarball = tarfile.open(output_file)
+    names = tmp_tarball.getnames()
+    tmp_tarball.extractall("/tmp")
+    tmp_tarball.close()
+
