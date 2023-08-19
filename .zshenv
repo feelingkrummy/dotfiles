@@ -9,4 +9,3 @@ export PATH="$PATH\
 :$HOME/.local/bin"
 
 export LM_LICENSE_FILE="/home/kameron/intelFPGA_lite/licenses/LR-125699_License.dat"
-
