@@ -80,4 +80,4 @@ else:
         version_fd.write(zig_json["master"]["version"])
     print("Zig updated!")
 
-
+## TODO : chmod zig to be executable
