@@ -18,12 +18,6 @@ def extract_tarball( tarball_filename ):
     tarball.close()
 
 
-# def copy_dir_to_existing_dir( src_dir, existing_dir ):
-#     shutil.copytree( src_dir, existing_dir, symlinks=True, dirs_exist_ok=True )
-
-
-#install_dir = "/home/kameron/Documents/zig-download-test"
-#zig_exists = os.path.exists("/home/kameron/.local/bin/zig")
 install_dir = "/home/kameron/.local/bin/zig"
 zig_exists = os.path.exists(install_dir)
 output_file = "/tmp/zig-download.tar.xz"
@@ -35,18 +29,11 @@ zig_json = response.json()
 download_link = zig_json["master"]["x86_64-linux"]["tarball"]
 extracted_dir_name = download_link.split('/')[-1].split(".tar.xz")[0] 
 
-
-print( zig_exists )
-print(download_link)
-print(extracted_dir_name)
-
 if zig_exists :
     try:
         with open(version_file, "r") as version_fd:
             installed_version = version_fd.readline()
             current_version = zig_json["master"]["version"]
-            print('"'+installed_version+'"')
-            print('"'+current_version+'"')
             if installed_version != current_version:
                 print("Zig version out of date, starting update")
                 zig_needs_updated = True
@@ -80,4 +67,3 @@ else:
         version_fd.write(zig_json["master"]["version"])
     print("Zig updated!")
 
-## TODO : chmod zig to be executable
