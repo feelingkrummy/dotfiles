@@ -1,10 +1,3 @@
--- CtrlP
-vim.g.ctrlp_working_path_mode = "0"
-
--- Nerdtree
-vim.g.NERDTreeWinSize = 45
-vim.g.NERDTreeQuitOnOpen = 1
-
 -- Lualine
 require('lualine').setup()
 
