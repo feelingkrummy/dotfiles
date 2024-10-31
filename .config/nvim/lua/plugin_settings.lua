@@ -62,3 +62,11 @@ require('telescope').setup {
 }
 
 require('telescope').load_extension('fzf')
+
+-- Gruvbox.nvim
+require('gruvbox').setup({
+    contrast = "hard"
+})
+vim.o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
+
