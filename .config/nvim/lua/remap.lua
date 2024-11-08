@@ -1,7 +1,7 @@
 vim.g.mapleader=" "
 
 for index, letter in ipairs({ "h", "j", "k", "l" }) do
-    vim.keymap.set( "n", "<C-".. letter .. ">", "<C-w>" .. letter )
+	vim.keymap.set( "n", "<C-".. letter .. ">", "<C-w>" .. letter )
 end
 
 vim.keymap.set( 'n', 'j', 'gj' )
