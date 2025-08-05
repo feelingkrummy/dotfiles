@@ -19,6 +19,7 @@ compinit
 #
 
 setopt completealiases
+setopt share_history
 
 # PROMPT="%F{red}[%f%F{yellow}%n%f%F{green}@%M%f %F{blue}%3~]%f %# " 
 #RPROMPT='%(?.%F{green}[%?]%f.%B%F{red}[%?]%f%b)'
@@ -26,17 +27,18 @@ RPROMPT='%(?..%B%F{red}[%?]%f%b)'
 # PROMPT=$'\n'"%F{cyan}(%M)%f %F{blue}%~%f"$'\n'" %B%F{yellow}>>%f%b " 
 PROMPT="%F{blue}[%n]%f%F{yellow}(%3~)%f %F{red}>%f "
 
+EDITOR=nvim
+
+alias rm="rm -i"
+
 alias ls="ls --color=auto"
 
 alias ll="ls -lh"
 alias la="ls -a"
 alias lla="ll -a"
 
-alias v="nvim.appimage"
-alias vim="nvim.appimage"
-alias nvim="nvim.appimage"
+alias v="nvim"
+alias vim="nvim"
 alias sue="sudoedit"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-export QSYS_ROOTDIR="/home/kameron/intelFPGA_lite/22.1std/quartus/sopc_builder/bin"

@@ -1,4 +1,4 @@
-[shell]
+[terminal.shell]
 args = ["-c", "tmux attach || tmux"]
 program = "/bin/zsh"
 
@@ -59,6 +59,8 @@ family = "Ubuntu Mono Nerd Font"
 
 [font.normal]
 family = "Ubuntu Mono Nerd Font"
+
+[terminal]
 
 # [schemes.everforest_dark_hard.bright]
 # black = "#4b565c"
