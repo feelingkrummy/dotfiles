@@ -37,8 +37,9 @@ alias ll="ls -lh"
 alias la="ls -a"
 alias lla="ll -a"
 
-alias v="nvim"
-alias vim="nvim"
+alias nvim="nvim.appimage"
+alias v="nvim.appimage"
+alias vim="nvim.appimage"
 alias sue="sudoedit"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
