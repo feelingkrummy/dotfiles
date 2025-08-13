@@ -12,14 +12,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- require("pack")
 require("plugins")
 
 require("settings")
 require("remap")
 require("autocmd")
-
--- colors = require("colors")
--- colors.setColorScheme()
 
 require("plugin_settings")
