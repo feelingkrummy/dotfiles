@@ -3,7 +3,8 @@ require("lazy").setup(
 		-- Treesitter
 		{
 			'nvim-treesitter/nvim-treesitter',
-			branch = 'main',
+			--branch = 'main',
+			branch = 'master',
 			lazy = false,
 			build = ':TSUpdate'
 		},
@@ -26,15 +27,6 @@ require("lazy").setup(
 			'nvim-telescope/telescope-fzf-native.nvim',
 			build = 'make'
 		},
-		{
-			"nvim-neo-tree/neo-tree.nvim",
-			branch = "v3.x",
-			dependencies = { 
-				"nvim-lua/plenary.nvim",
-				"nvim-tree/nvim-web-devicons",
-				"MunifTanjim/nui.nvim",
-			}
-		},
 		-- Vim Plugins
 		'rbgrouleff/bclose.vim',
 		{
@@ -56,7 +48,6 @@ require("lazy").setup(
 			}
 		},
 		-- Color Schemes
-		-- 'morhetz/gruvbox'
 		{"ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
 	}
 )

@@ -11,9 +11,6 @@ vim.keymap.set( 'n', '<leader>/', '<cmd>noh<CR>' )
 vim.keymap.set( 'n', '<leader>q', '<cmd>Bclose<CR>' )
 vim.keymap.set( 'n', '<leader>Q', '<cmd>Bclose!<CR>' )
 
--- Neotree 
-vim.keymap.set( 'n', '<C-n>', '<cmd>Neotree position=float<CR>' )
-
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
