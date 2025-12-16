@@ -1,15 +1,16 @@
-vim.g.mapleader=" "
+local kr = require("kr")
 
 for index, letter in ipairs({ "h", "j", "k", "l" }) do
-	vim.keymap.set( "n", "<C-".. letter .. ">", "<C-w>" .. letter )
+    vim.keymap.set( "n", "<C-".. letter .. ">", "<C-w>" .. letter )
 end
 
-vim.keymap.set( 'n', 'j', 'gj' )
+vim.keymap.set( 'n', 'j', 'gj' ) -- May not need these anymore because no wrap
 vim.keymap.set( 'n', 'k', 'gk' )
 
 vim.keymap.set( 'n', '<leader>/', '<cmd>noh<CR>' )
-vim.keymap.set( 'n', '<leader>q', '<cmd>Bclose<CR>' )
-vim.keymap.set( 'n', '<leader>Q', '<cmd>Bclose!<CR>' )
+
+vim.keymap.set('n', '<leader>q', function() kr.buffer_close() end)
+vim.keymap.set('n', '<leader>Q', function() kr.buffer_close{force = true} end)
 
 -- Telescope
 local builtin = require('telescope.builtin')
