@@ -35,12 +35,25 @@ function kr.buffer_close(opt)
     end
 
     for i,win in ipairs(win_list) do
-        vim.api.nvim_win_call(
-            win,
-            vim.cmd.bprevious
-        )
+        alt_buf_num = vim.fn.bufnr('#')
+        if  (alt_buf_num > 0) and
+            (alt_buf_num ~= target_buf_num) and
+            vim.api.nvim_buf_is_loaded(alt_buf_num)
+        then
+            vim.api.nvim_win_call(
+                win,
+                function()
+                    vim.cmd.buffer{ args = { alt_buf_num } }
+                end
+            )
+        else
+            vim.api.nvim_win_call(
+                win,
+                vim.cmd.bprevious
+            )
+        end
         if vim.api.nvim_win_get_buf(win) == target_buf_num then
-            -- If bprevious resulted in target buffer,
+            -- If "buffer #" or "bprevious" resulted in target buffer,
             -- search for a loaded buffer to switch to
             local found_loaded_buf = false
             for i,buf in ipairs(vim.api.nvim_list_bufs()) do

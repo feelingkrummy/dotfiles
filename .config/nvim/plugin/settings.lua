@@ -13,7 +13,8 @@ vim.opt.listchars = "tab:> ,trail:.,nbsp:+"
 -- Colors
 vim.opt.termguicolors = true
 vim.o.background = "dark"
-vim.cmd.colorscheme("gruvbox")
+--vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("tokyonight-night")
 
 -- Visual
 vim.opt.cursorline = true
