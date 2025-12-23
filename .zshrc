@@ -16,16 +16,16 @@ zstyle :compinstall filename '/home/kameron/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-#
 
-setopt completealiases
+setopt complete_aliases
 setopt share_history
 
 # PROMPT="%F{red}[%f%F{yellow}%n%f%F{green}@%M%f %F{blue}%3~]%f %# " 
-#RPROMPT='%(?.%F{green}[%?]%f.%B%F{red}[%?]%f%b)'
-RPROMPT='%(?..%B%F{red}[%?]%f%b)'
+# RPROMPT='%(?.%F{green}[%?]%f.%B%F{red}[%?]%f%b)'
+# RPROMPT='%(?..%F{red}[%?]%f)'
 # PROMPT=$'\n'"%F{cyan}(%M)%f %F{blue}%~%f"$'\n'" %B%F{yellow}>>%f%b " 
-PROMPT="%F{blue}[%n]%f%F{yellow}(%3~)%f %F{red}>%f "
+# PROMPT="%F{blue}[%n]%f%F{yellow}(%3~)%f %F{red}>%f "
+PROMPT="%(?..%F{red}[%?] %f)%F{green}%n@%M%f %F{cyan}%~"$'\n'"%f%F{yellow}> %f"
 
 EDITOR=nvim
 
