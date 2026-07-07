@@ -1,0 +1,92 @@
+" TODO :
+" Add Buffer Close Plugin/Maps
+" Add Tmux Navigation Plugin/Maps
+" Add FZF Support
+" Find better colorscheme
+
+set nocompatible
+
+""" SETTINGS
+set encoding=utf-8
+set hidden
+set history=1000
+set autoread
+
+"" Tabs and Whitespace
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set autoindent
+set smartindent
+set smarttab
+
+set list
+set listchars=tab:>\ ,trail:-,nbsp:+
+
+set nojoinspaces
+
+set backspace=indent,eol,start
+
+"" Colors
+set termguicolors
+set background=dark
+"let g:gruvbox_contrast_dark='hard'
+"colorscheme gruvbox
+colorscheme quiet
+
+"" Visual
+set cursorline
+set number
+set norelativenumber
+set nowrap
+set scrolloff=10
+set sidescroll=0
+set laststatus=2 " Need more statusline customization
+set colorcolumn=100
+set hlsearch
+set incsearch
+
+" format options, nvim default: tcqj, vim default: tcq
+set formatoptions=tcqj " Verify that c doesn't do that annoying comment thing
+set formatoptions+=/ " I think this is working
+
+"" Window
+set splitbelow
+set splitright
+set belloff=all
+set display=lastline
+
+"" Completion
+"set complete=.,w,b,u,t " Neovim default excludes i, Vim does
+set completeopt=menuone,popup,noinsert",fuzzy
+set completepopup=align:menu,border:ascii " idk if this is doing anything
+
+"" Mouse
+" Want some mouse settings, but need to verify how they interact with tmux
+" set mouse=nvi 
+" set mousemodel=popup_setpos
+
+" Vim has a diff mode, need to test and configure
+" See diff, diffopt
+
+""" REMAPS
+let mapleader=" "
+
+nnoremap <leader>/ :noh<CR>
+" I think these are obsolete with TmuxNavigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap j gj
+nnoremap k gk
+
+
+""" AUTOCMDS
+autocmd BufNewFile,BufRead *.tex set filetype=tex
+autocmd Filetype tex setlocal spell
+autocmd Filetype markdown setlocal spell
+
