@@ -1,10 +1,10 @@
 " TODO :
-" Add Buffer Close Plugin/Maps
 " Add Tmux Navigation Plugin/Maps
 " Add FZF Support
 " Find better colorscheme
 
 set nocompatible
+syntax on
 
 """ SETTINGS
 set encoding=utf-8
@@ -61,7 +61,7 @@ set display=lastline
 "" Completion
 "set complete=.,w,b,u,t " Neovim default excludes i, Vim does
 set completeopt=menuone,popup,noinsert",fuzzy
-set completepopup=align:menu,border:ascii " idk if this is doing anything
+set completepopup=align:menu,border:on" idk if this is doing anything
 
 "" Mouse
 " Want some mouse settings, but need to verify how they interact with tmux
@@ -76,14 +76,24 @@ let mapleader=" "
 
 nnoremap <leader>/ :noh<CR>
 " I think these are obsolete with TmuxNavigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" nnoremap <M-h> <C-w>h
+" nnoremap <M-j> <C-w>j
+" nnoremap <M-k> <C-w>k
+" nnoremap <M-l> <C-w>l
 
 nnoremap j gj
 nnoremap k gk
 
+nnoremap <leader>q :Bclose<CR>
+nnoremap <leader>Q :Bclose!<CR>
+
+let g:tmux_navigator_no_mappings=1
+
+nnoremap <silent> <C-h> :<C-U>TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :<C-U>TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :<C-U>TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :<C-U>TmuxNavigateRight<CR>
+nnoremap <silent> <C-\> :<C-U>TmuxNavigatePrevious<CR>
 
 """ AUTOCMDS
 autocmd BufNewFile,BufRead *.tex set filetype=tex
