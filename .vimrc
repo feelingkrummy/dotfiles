@@ -1,5 +1,4 @@
 " TODO :
-" Add Tmux Navigation Plugin/Maps
 " Add FZF Support
 " Find better colorscheme
 
@@ -32,9 +31,9 @@ set backspace=indent,eol,start
 "" Colors
 set termguicolors
 set background=dark
-"let g:gruvbox_contrast_dark='hard'
-"colorscheme gruvbox
-colorscheme quiet
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+"colorscheme quiet
 
 "" Visual
 set cursorline
@@ -93,7 +92,7 @@ nnoremap <silent> <C-h> :<C-U>TmuxNavigateLeft<CR>
 nnoremap <silent> <C-j> :<C-U>TmuxNavigateDown<CR>
 nnoremap <silent> <C-k> :<C-U>TmuxNavigateUp<CR>
 nnoremap <silent> <C-l> :<C-U>TmuxNavigateRight<CR>
-nnoremap <silent> <C-\> :<C-U>TmuxNavigatePrevious<CR>
+nnoremap <silent> <C-p> :<C-U>TmuxNavigatePrevious<CR>
 
 """ AUTOCMDS
 autocmd BufNewFile,BufRead *.tex set filetype=tex
