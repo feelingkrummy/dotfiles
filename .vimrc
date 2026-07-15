@@ -94,8 +94,15 @@ nnoremap <silent> <C-k> :<C-U>TmuxNavigateUp<CR>
 nnoremap <silent> <C-l> :<C-U>TmuxNavigateRight<CR>
 nnoremap <silent> <C-p> :<C-U>TmuxNavigatePrevious<CR>
 
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fb :Buffers<CR>
+
 """ AUTOCMDS
 autocmd BufNewFile,BufRead *.tex set filetype=tex
 autocmd Filetype tex setlocal spell
 autocmd Filetype markdown setlocal spell
 
+
+""" FZF
+let g:fzf_vim = {}
+let g:fzf_vim.preview_window = []
